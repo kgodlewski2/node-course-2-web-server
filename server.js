@@ -54,10 +54,11 @@ app.get('/bad', (req, res) => {
     })
 });
 
-app.get('/bad', (req, res) => {
-    res.send({
-        error: 'Error fullfiling request.'
-    })
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        welcomeMessage: 'This is my portfolio page!'
+    });
 });
 
 app.listen(port, () => {
